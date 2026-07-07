@@ -2,6 +2,9 @@
 
 Responsive solution for the [devChallenges.io Meet the Team Section challenge](https://devchallenges.io/challenge/meet-the-team-section-challenge).
 
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/ad8c351b-4618-439a-ab5a-99d0420d3547" />
+
+
 ## Overview
 
 This project is a static landing page built with semantic HTML and CSS. It recreates the challenge layout with a headline area, a call-to-action link, and a responsive team member grid.
