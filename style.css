@@ -35,7 +35,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1250px;
+  max-width: 1350px;
   background-color: #ffffff;
   border-radius: var(--radius-main);
   overflow: hidden;
@@ -73,7 +73,7 @@ body {
   left: 0;
   width: 50%;
   height: 100%;
-  padding: 2.9rem 2.2rem 1.6rem 2.7rem;
+  padding: 2.4rem 2rem 1.25rem 2.4rem;
   z-index: 1;
   max-width: 100%;
 }
@@ -83,7 +83,7 @@ body {
   left: 0;
   bottom: 0;
   width: 50%;
-  padding: 1.8rem 2.4rem 2rem 2.7rem;
+  padding: 1.2rem 2rem 1.6rem 2.4rem;
   z-index: 2;
   color: var(--color-gray);
   text-decoration: none;
@@ -108,18 +108,18 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.85rem;
   font-weight: 700;
   color: var(--color-black);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   line-height: 1.02;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
 }
 
 .header-content p {
   color: var(--color-gray);
-  line-height: 1.43;
-  font-size: 1.1rem;
+  line-height: 1.35;
+  font-size: 1.05rem;
   max-width: 100%;
 }
 
@@ -127,7 +127,15 @@ h1 {
 .card {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 5 / 6;
+}
+
+.sophia {
+  border-top-right-radius: 24px;
+}
+
+.noah {
+  border-bottom-right-radius: 24px;
 }
 
 .card img {
@@ -250,7 +258,7 @@ h1 {
   }
 
   .card {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 5 / 6;
   }
 }
 
