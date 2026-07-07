@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-blue: #204192;
+  --color-black: #000000;
+  --color-gray: #525252;
+  --color-bg-gray: #F3F4F6;
+  
+  --color-liam: #B2B1FF;
+  --color-sophia: #EBA2C4;
+  --color-ethan: #9BBFEF;
+  --color-isabella: #F9D1A5;
+  --color-noah: #88E0C9;
+
+  --font-primary: 'Poppins', sans-serif;
+  --radius-main: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1350px;
+  background-color: #ffffff;
+  border-radius: var(--radius-main);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+}
+
+/* Header BG & Content Positioning (Desktop) */
+.header-bg {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: var(--color-bg-gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.header-bg .decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.header-content {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 3.5rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.see-all {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  padding: 3rem;
+  position: relative;
+  z-index: 2;
+  color: var(--color-gray);
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.see-all:hover {
+  color: var(--color-black);
+}
+
+/* Header Text Styles */
+.label {
+  color: var(--color-blue);
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.header-content p {
+  color: var(--color-gray);
+  line-height: 1.6;
+  font-size: 1rem;
+  max-width: 100%;
+}
+
+/* Member Card Styles */
+.card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  color: #ffffff;
+}
+
+.overlay h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.overlay p {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+/* Specific Member Grid Placement (Desktop) */
+.liam { grid-column: 2; grid-row: 1; background-color: var(--color-liam); }
+.sophia { grid-column: 3; grid-row: 1; background-color: var(--color-sophia); }
+.ethan { grid-column: 1; grid-row: 2; background-color: var(--color-ethan); }
+.isabella { grid-column: 2; grid-row: 2; background-color: var(--color-isabella); }
+.noah { grid-column: 3; grid-row: 2; background-color: var(--color-noah); }
+
+/* Tablet Layout (Max 1024px) */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .header-bg {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    min-height: 250px;
+  }
+
+  .header-content {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    padding: 4rem 3rem 2rem 3rem;
+  }
+
+  /* Tablet Grid Placement */
+  .liam { grid-column: 1; grid-row: 2; }
+  .sophia { grid-column: 2; grid-row: 2; }
+  .ethan { grid-column: 3; grid-row: 2; }
+  
+  .isabella { grid-column: 2; grid-row: 3; }
+  .noah { grid-column: 3; grid-row: 3; }
+  
+  .see-all {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: end;
+    padding: 3rem;
+  }
+}
+
+/* Mobile Layout (Max 768px) */
+@media (max-width: 768px) {
+  .container {
+    border-radius: 0;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .team-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-bg {
+    min-height: auto;
+  }
+
+  .header-content {
+    padding: 3rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .see-all {
+    padding: 2rem 1.5rem 4rem 1.5rem;
+    order: 10;
+  }
+
+  .card {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.author-info {
+  margin: 3rem 0;
+  text-align: center;
+  color: var(--color-gray);
+  font-size: 0.875rem;
+}
+
+.author-info a {
+  color: var(--color-blue);
+  text-decoration: none;
+}
